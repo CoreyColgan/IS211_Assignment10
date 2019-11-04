@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
-
-
 import sqlite3 as lite
-
 
 db = lite.connect('pets.db')
 
@@ -41,10 +37,3 @@ with db:
     cur.executemany("INSERT INTO person VALUES(?,?,?,?)",person)
     cur.executemany("INSERT INTO pet VALUES(?,?,?,?,?)",pet)
     cur.executemany("INSERT INTO person_pet VALUES(?,?)",person_pet)
-
-
-# In[ ]:
-
-
-
-
